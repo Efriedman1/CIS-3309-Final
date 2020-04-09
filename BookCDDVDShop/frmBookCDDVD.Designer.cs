@@ -741,7 +741,7 @@
             this.btnExit.Location = new System.Drawing.Point(1261, 559);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(189, 92);
+            this.btnExit.Size = new System.Drawing.Size(189, 74);
             this.btnExit.TabIndex = 151;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
