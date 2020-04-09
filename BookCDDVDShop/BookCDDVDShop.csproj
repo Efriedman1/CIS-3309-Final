@@ -65,7 +65,7 @@
     <Compile Include="Globals.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Validate.cs" />
+    <Compile Include="Validators.cs" />
     <EmbeddedResource Include="frmBookCDDVD.resx">
       <DependentUpon>frmBookCDDVD.cs</DependentUpon>
     </EmbeddedResource>
