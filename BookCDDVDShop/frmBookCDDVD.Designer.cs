@@ -34,7 +34,7 @@
             this.btnSaveUpdates = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnFindDisplay = new System.Windows.Forms.Button();
-            this.btnEnterUPC = new System.Windows.Forms.Button();
+            this.btnSearchUPC = new System.Windows.Forms.Button();
             this.lblInstruct2 = new System.Windows.Forms.Label();
             this.gbProduct = new System.Windows.Forms.GroupBox();
             this.gbCDClassical = new System.Windows.Forms.GroupBox();
@@ -85,6 +85,7 @@
             this.lblWelcome = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnClearForm = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.gbDataProcessing.SuspendLayout();
             this.gbProduct.SuspendLayout();
             this.gbCDClassical.SuspendLayout();
@@ -98,12 +99,13 @@
             // 
             // gbDataProcessing
             // 
+            this.gbDataProcessing.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.gbDataProcessing.Controls.Add(this.btnAdd);
             this.gbDataProcessing.Controls.Add(this.lblInstruct3);
             this.gbDataProcessing.Controls.Add(this.btnDelete);
             this.gbDataProcessing.Controls.Add(this.btnSaveUpdates);
             this.gbDataProcessing.Controls.Add(this.btnEdit);
             this.gbDataProcessing.Controls.Add(this.btnFindDisplay);
-            this.gbDataProcessing.Controls.Add(this.btnEnterUPC);
             this.gbDataProcessing.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDataProcessing.Location = new System.Drawing.Point(17, 1076);
             this.gbDataProcessing.Name = "gbDataProcessing";
@@ -127,11 +129,12 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.White;
+            this.btnDelete.BackColor = System.Drawing.Color.LightGray;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.Enabled = false;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(1004, 129);
+            this.btnDelete.Location = new System.Drawing.Point(947, 136);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(203, 57);
@@ -142,11 +145,12 @@
             // 
             // btnSaveUpdates
             // 
-            this.btnSaveUpdates.BackColor = System.Drawing.Color.White;
+            this.btnSaveUpdates.BackColor = System.Drawing.Color.LightGray;
             this.btnSaveUpdates.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveUpdates.Enabled = false;
             this.btnSaveUpdates.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSaveUpdates.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveUpdates.Location = new System.Drawing.Point(786, 129);
+            this.btnSaveUpdates.Location = new System.Drawing.Point(729, 136);
             this.btnSaveUpdates.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSaveUpdates.Name = "btnSaveUpdates";
             this.btnSaveUpdates.Size = new System.Drawing.Size(203, 57);
@@ -157,11 +161,12 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.White;
+            this.btnEdit.BackColor = System.Drawing.Color.LightGray;
             this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.Enabled = false;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEdit.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(567, 129);
+            this.btnEdit.Location = new System.Drawing.Point(510, 136);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(203, 57);
@@ -172,11 +177,12 @@
             // 
             // btnFindDisplay
             // 
-            this.btnFindDisplay.BackColor = System.Drawing.Color.White;
+            this.btnFindDisplay.BackColor = System.Drawing.Color.LightGray;
             this.btnFindDisplay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFindDisplay.Enabled = false;
             this.btnFindDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFindDisplay.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFindDisplay.Location = new System.Drawing.Point(352, 129);
+            this.btnFindDisplay.Location = new System.Drawing.Point(294, 136);
             this.btnFindDisplay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFindDisplay.Name = "btnFindDisplay";
             this.btnFindDisplay.Size = new System.Drawing.Size(203, 57);
@@ -185,36 +191,38 @@
             this.btnFindDisplay.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnFindDisplay.UseVisualStyleBackColor = false;
             // 
-            // btnEnterUPC
+            // btnSearchUPC
             // 
-            this.btnEnterUPC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnEnterUPC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEnterUPC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEnterUPC.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnterUPC.Location = new System.Drawing.Point(12, 129);
-            this.btnEnterUPC.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnEnterUPC.Name = "btnEnterUPC";
-            this.btnEnterUPC.Size = new System.Drawing.Size(329, 57);
-            this.btnEnterUPC.TabIndex = 144;
-            this.btnEnterUPC.Text = "Click HERE to enter a UPC";
-            this.btnEnterUPC.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnEnterUPC.UseVisualStyleBackColor = false;
+            this.btnSearchUPC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnSearchUPC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearchUPC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearchUPC.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchUPC.Location = new System.Drawing.Point(1261, 357);
+            this.btnSearchUPC.Margin = new System.Windows.Forms.Padding(4, 5, 15, 5);
+            this.btnSearchUPC.Name = "btnSearchUPC";
+            this.btnSearchUPC.Size = new System.Drawing.Size(189, 86);
+            this.btnSearchUPC.TabIndex = 144;
+            this.btnSearchUPC.Text = "Search UPC";
+            this.btnSearchUPC.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnSearchUPC.UseVisualStyleBackColor = false;
+            this.btnSearchUPC.Click += new System.EventHandler(this.btnSearchUPC_Click);
             // 
             // lblInstruct2
             // 
             this.lblInstruct2.AutoSize = true;
             this.lblInstruct2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInstruct2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.lblInstruct2.Location = new System.Drawing.Point(10, 295);
+            this.lblInstruct2.Location = new System.Drawing.Point(53, 294);
             this.lblInstruct2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInstruct2.Name = "lblInstruct2";
-            this.lblInstruct2.Size = new System.Drawing.Size(1403, 31);
+            this.lblInstruct2.Size = new System.Drawing.Size(1324, 31);
             this.lblInstruct2.TabIndex = 157;
-            this.lblInstruct2.Text = "To FIND/SEARCH, Edit/UPDATE or DELETE, enter Product UPC, and Select appropriate " +
-    "control at bottom of form.";
+            this.lblInstruct2.Text = "To Find/Display, Edit, Update or Delete, enter Product UPC, and Select appropriat" +
+    "e control at bottom of form.";
             // 
             // gbProduct
             // 
+            this.gbProduct.BackColor = System.Drawing.Color.WhiteSmoke;
             this.gbProduct.Controls.Add(this.gbCDClassical);
             this.gbProduct.Controls.Add(this.gbDVD);
             this.gbProduct.Controls.Add(this.gbBook);
@@ -621,6 +629,7 @@
             // 
             // gbCreateControls
             // 
+            this.gbCreateControls.BackColor = System.Drawing.Color.WhiteSmoke;
             this.gbCreateControls.Controls.Add(this.btnCreateCDChamber);
             this.gbCreateControls.Controls.Add(this.btnCreateCDOrchestral);
             this.gbCreateControls.Controls.Add(this.btnCreateDVD);
@@ -648,6 +657,7 @@
             this.btnCreateCDChamber.Text = "Create CD Chamber";
             this.btnCreateCDChamber.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCreateCDChamber.UseVisualStyleBackColor = false;
+            this.btnCreateCDChamber.Click += new System.EventHandler(this.btnCreateCDChamber_Click);
             // 
             // btnCreateCDOrchestral
             // 
@@ -663,6 +673,7 @@
             this.btnCreateCDOrchestral.Text = "Create CD Orchestral";
             this.btnCreateCDOrchestral.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCreateCDOrchestral.UseVisualStyleBackColor = false;
+            this.btnCreateCDOrchestral.Click += new System.EventHandler(this.btnCreateCDOrchestral_Click);
             // 
             // btnCreateDVD
             // 
@@ -678,6 +689,7 @@
             this.btnCreateDVD.Text = "Create DVD";
             this.btnCreateDVD.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCreateDVD.UseVisualStyleBackColor = false;
+            this.btnCreateDVD.Click += new System.EventHandler(this.btnCreateDVD_Click);
             // 
             // btnCreateBookCIS
             // 
@@ -693,6 +705,7 @@
             this.btnCreateBookCIS.Text = "Create Book CIS";
             this.btnCreateBookCIS.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCreateBookCIS.UseVisualStyleBackColor = false;
+            this.btnCreateBookCIS.Click += new System.EventHandler(this.btnCreateBookCIS_Click);
             // 
             // btnCreateBook
             // 
@@ -708,6 +721,7 @@
             this.btnCreateBook.Text = "Create Book";
             this.btnCreateBook.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCreateBook.UseVisualStyleBackColor = false;
+            this.btnCreateBook.Click += new System.EventHandler(this.btnCreateBook_Click);
             // 
             // lblInstruct
             // 
@@ -745,19 +759,37 @@
             this.btnExit.TabIndex = 151;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnClearForm
             // 
             this.btnClearForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnClearForm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClearForm.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearForm.Location = new System.Drawing.Point(1261, 445);
+            this.btnClearForm.Location = new System.Drawing.Point(1261, 460);
             this.btnClearForm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClearForm.Name = "btnClearForm";
             this.btnClearForm.Size = new System.Drawing.Size(189, 85);
             this.btnClearForm.TabIndex = 150;
             this.btnClearForm.Text = "Clear Form";
             this.btnClearForm.UseVisualStyleBackColor = false;
+            this.btnClearForm.Click += new System.EventHandler(this.btnClearForm_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.LightGray;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.Enabled = false;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdd.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(76, 136);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(203, 57);
+            this.btnAdd.TabIndex = 160;
+            this.btnAdd.Text = "Add Product";
+            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // BookCDDVD
             // 
@@ -770,6 +802,7 @@
             this.Controls.Add(this.gbProduct);
             this.Controls.Add(this.gbCreateControls);
             this.Controls.Add(this.lblInstruct);
+            this.Controls.Add(this.btnSearchUPC);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClearForm);
             this.Controls.Add(this.lblWelcome);
@@ -800,7 +833,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbDataProcessing;
-        private System.Windows.Forms.Button btnEnterUPC;
+        private System.Windows.Forms.Button btnSearchUPC;
         private System.Windows.Forms.Label lblInstruct2;
         private System.Windows.Forms.GroupBox gbProduct;
         private System.Windows.Forms.GroupBox gbCDClassical;
@@ -856,6 +889,7 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnFindDisplay;
         private System.Windows.Forms.Label lblInstruct3;
+        private System.Windows.Forms.Button btnAdd;
     }
 }
 
