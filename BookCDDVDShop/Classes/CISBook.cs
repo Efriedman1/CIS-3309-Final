@@ -18,6 +18,7 @@ namespace BookCDDVDShop.Classes
     class CISBook : Book //CISBook inherits from book
     {
         private string hiddenCISArea;
+    
 
         public CISBook()
         {

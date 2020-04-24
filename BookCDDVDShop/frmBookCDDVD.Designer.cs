@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.gbDataProcessing = new System.Windows.Forms.GroupBox();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.lblInstruct3 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnSaveUpdates = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnFindDisplay = new System.Windows.Forms.Button();
             this.btnSearchUPC = new System.Windows.Forms.Button();
@@ -85,7 +86,6 @@
             this.lblWelcome = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnClearForm = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.gbDataProcessing.SuspendLayout();
             this.gbProduct.SuspendLayout();
             this.gbCDClassical.SuspendLayout();
@@ -103,7 +103,7 @@
             this.gbDataProcessing.Controls.Add(this.btnAdd);
             this.gbDataProcessing.Controls.Add(this.lblInstruct3);
             this.gbDataProcessing.Controls.Add(this.btnDelete);
-            this.gbDataProcessing.Controls.Add(this.btnSaveUpdates);
+            this.gbDataProcessing.Controls.Add(this.btnUpdate);
             this.gbDataProcessing.Controls.Add(this.btnEdit);
             this.gbDataProcessing.Controls.Add(this.btnFindDisplay);
             this.gbDataProcessing.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -113,6 +113,23 @@
             this.gbDataProcessing.TabIndex = 158;
             this.gbDataProcessing.TabStop = false;
             this.gbDataProcessing.Text = "Form Controls for Data Processing";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.LightGray;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.Enabled = false;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdd.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(76, 136);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(203, 57);
+            this.btnAdd.TabIndex = 160;
+            this.btnAdd.Text = "Add Product";
+            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // lblInstruct3
             // 
@@ -142,22 +159,24 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // btnSaveUpdates
+            // btnUpdate
             // 
-            this.btnSaveUpdates.BackColor = System.Drawing.Color.LightGray;
-            this.btnSaveUpdates.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSaveUpdates.Enabled = false;
-            this.btnSaveUpdates.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSaveUpdates.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveUpdates.Location = new System.Drawing.Point(729, 136);
-            this.btnSaveUpdates.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnSaveUpdates.Name = "btnSaveUpdates";
-            this.btnSaveUpdates.Size = new System.Drawing.Size(203, 57);
-            this.btnSaveUpdates.TabIndex = 147;
-            this.btnSaveUpdates.Text = "Save Updates";
-            this.btnSaveUpdates.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnSaveUpdates.UseVisualStyleBackColor = false;
+            this.btnUpdate.BackColor = System.Drawing.Color.LightGray;
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.Enabled = false;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdate.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(729, 136);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(203, 57);
+            this.btnUpdate.TabIndex = 147;
+            this.btnUpdate.Text = "Save Updates";
+            this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnEdit
             // 
@@ -174,6 +193,7 @@
             this.btnEdit.Text = "Edit";
             this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnFindDisplay
             // 
@@ -190,6 +210,7 @@
             this.btnFindDisplay.Text = "Find/Display";
             this.btnFindDisplay.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnFindDisplay.UseVisualStyleBackColor = false;
+            this.btnFindDisplay.Click += new System.EventHandler(this.btnFindDisplay_Click);
             // 
             // btnSearchUPC
             // 
@@ -496,7 +517,7 @@
             // txtPages
             // 
             this.txtPages.Enabled = false;
-            this.txtPages.Location = new System.Drawing.Point(790, 56);
+            this.txtPages.Location = new System.Drawing.Point(927, 57);
             this.txtPages.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPages.Name = "txtPages";
             this.txtPages.Size = new System.Drawing.Size(148, 39);
@@ -505,7 +526,7 @@
             // lblPages
             // 
             this.lblPages.AutoSize = true;
-            this.lblPages.Location = new System.Drawing.Point(686, 59);
+            this.lblPages.Location = new System.Drawing.Point(828, 59);
             this.lblPages.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPages.Name = "lblPages";
             this.lblPages.Size = new System.Drawing.Size(91, 32);
@@ -515,10 +536,10 @@
             // txtAuthor
             // 
             this.txtAuthor.Enabled = false;
-            this.txtAuthor.Location = new System.Drawing.Point(483, 57);
+            this.txtAuthor.Location = new System.Drawing.Point(478, 57);
             this.txtAuthor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(148, 39);
+            this.txtAuthor.Size = new System.Drawing.Size(323, 39);
             this.txtAuthor.TabIndex = 112;
             // 
             // lblAuthor
@@ -569,6 +590,7 @@
             this.txtUPC.Name = "txtUPC";
             this.txtUPC.Size = new System.Drawing.Size(148, 39);
             this.txtUPC.TabIndex = 99;
+            this.txtUPC.UseWaitCursor = true;
             // 
             // lblPrice
             // 
@@ -602,16 +624,16 @@
             // txtTitle
             // 
             this.txtTitle.Enabled = false;
-            this.txtTitle.Location = new System.Drawing.Point(659, 41);
+            this.txtTitle.Location = new System.Drawing.Point(657, 41);
             this.txtTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(200, 39);
+            this.txtTitle.Size = new System.Drawing.Size(305, 39);
             this.txtTitle.TabIndex = 103;
             // 
             // lblQuanity
             // 
             this.lblQuanity.AutoSize = true;
-            this.lblQuanity.Location = new System.Drawing.Point(882, 44);
+            this.lblQuanity.Location = new System.Drawing.Point(972, 44);
             this.lblQuanity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuanity.Name = "lblQuanity";
             this.lblQuanity.Size = new System.Drawing.Size(109, 32);
@@ -621,10 +643,10 @@
             // txtQuanity
             // 
             this.txtQuanity.Enabled = false;
-            this.txtQuanity.Location = new System.Drawing.Point(1008, 41);
+            this.txtQuanity.Location = new System.Drawing.Point(1089, 39);
             this.txtQuanity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtQuanity.Name = "txtQuanity";
-            this.txtQuanity.Size = new System.Drawing.Size(148, 39);
+            this.txtQuanity.Size = new System.Drawing.Size(90, 39);
             this.txtQuanity.TabIndex = 105;
             // 
             // gbCreateControls
@@ -775,22 +797,6 @@
             this.btnClearForm.UseVisualStyleBackColor = false;
             this.btnClearForm.Click += new System.EventHandler(this.btnClearForm_Click);
             // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.LightGray;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.Enabled = false;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAdd.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(76, 136);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(203, 57);
-            this.btnAdd.TabIndex = 160;
-            this.btnAdd.Text = "Add Product";
-            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnAdd.UseVisualStyleBackColor = false;
-            // 
             // BookCDDVD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -885,7 +891,7 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnClearForm;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnSaveUpdates;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnFindDisplay;
         private System.Windows.Forms.Label lblInstruct3;
