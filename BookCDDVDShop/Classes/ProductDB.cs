@@ -1,4 +1,31 @@
-﻿using System;
+﻿/* Product Database Class
+ * Authors: Nick Filauro & Erika Gepilano
+ * April 2016 * Version 1
+ *
+ * Updated 11/18/2016 * Version 2 * Elliot Stoner
+ * Updated 06/17/2017 * Version 3 * Frank Friedman
+ * Updated 06/30/2018 * Version 4 * Frank Friedman
+ * Updated 06/20/2019 * Version 5 * Frank Friedman
+ *
+ * Purpose: A class that interacts and performs database operations for Product
+ * in a Microsoft Access database using an OLEDB Data Reader.
+ * It will contain methods for CRUD(Create, Read, Update, Delete) operations.
+
+*
+* !! Requirements !!
+ * You must have the Access Database Engine installed on the system you are running the program on.
+ * https://www.microsoft.com/en-us/download/details.aspx?id=13255
+ * 
+ * No constructors were written */
+
+/* 
+ * Eric Friedman
+ * Andrew Larkins
+ * CIS-3309
+ * Final Project
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
 using System.Linq;
@@ -261,7 +288,6 @@ namespace BookCDDVDShop.Classes
             }
             return myDataReader;
         }  // end SelectProduct
-
         // 1 Queries/selects records from Product table that match integer parameter ProductUPC
         // Returns a reference to the retrieved record
         public OleDbDataReader SelectProductFromProduct(int ProductUPC,
@@ -358,6 +384,7 @@ namespace BookCDDVDShop.Classes
 
             OleDbConnection myConnection = new OleDbConnection(strConnection); //Create a connection instance
             OleDbCommand myCommand = new OleDbCommand(strSelectProduct, myConnection); //Create a command instance
+
             OleDbDataReader myDataReader;
 
             string dbStringBook = "";
@@ -416,6 +443,7 @@ namespace BookCDDVDShop.Classes
 
             try
             {
+
                 myConnection.Open(); //Open database connection
                 myDataReader = myCommand.ExecuteReader();
                 if (myDataReader.HasRows == false) OKFlag = false;
@@ -423,7 +451,8 @@ namespace BookCDDVDShop.Classes
 
                 myDataReader.Read();
                 dbStringProduct = myDataReader["fldUPC"].ToString() + Environment.NewLine;
-dbStringProduct = dbStringProduct + myDataReader["fldPrice"].ToString() + Environment.NewLine;
+                dbStringProduct = dbStringProduct + myDataReader["fldPrice"].ToString() + Environment.NewLine;
+
                 dbStringProduct = dbStringProduct + myDataReader["fldTitle"].ToString() + Environment.NewLine;
                 dbStringProduct = dbStringProduct + myDataReader["fldQuantity"].ToString() + Environment.NewLine;
                 dbStringProduct = dbStringProduct + myDataReader["fldProductType"].ToString() + Environment.NewLine;
@@ -458,6 +487,7 @@ dbStringProduct = dbStringProduct + myDataReader["fldPrice"].ToString() + Enviro
                 + "INNER JOIN CDChamber ON CDChamber.fldUPC = Product.fldUPC "
                 + "WHERE Product.fldUPC = " + ProductUPC + ";";
 
+
             OleDbConnection myConnection = new OleDbConnection(strConnection); //Create a connection instance
             OleDbCommand myCommand = new OleDbCommand(strSelectProduct, myConnection); //Create a command instance
             OleDbDataReader myDataReader;
@@ -471,16 +501,15 @@ dbStringProduct = dbStringProduct + myDataReader["fldPrice"].ToString() + Enviro
                 myDataReader = myCommand.ExecuteReader();
                 if (myDataReader.HasRows == false) OKFlag = false;
                 else OKFlag = true; //Select was successful
-           
                 myDataReader.Read();
                 dbStringProduct = myDataReader["fldUPC"].ToString() + Environment.NewLine;
                 dbStringProduct = dbStringProduct + myDataReader["fldPrice"].ToString() + Environment.NewLine;
                 dbStringProduct = dbStringProduct + myDataReader["fldTitle"].ToString() + Environment.NewLine;
                 dbStringProduct = dbStringProduct + myDataReader["fldQuantity"].ToString() + Environment.NewLine;
                 dbStringProduct = dbStringProduct + myDataReader["fldProductType"].ToString() + Environment.NewLine;
-
                 dbStringCDClassical = dbStringCDClassical + myDataReader["fldLabel"].ToString() + Environment.NewLine;
                 dbStringCDClassical = dbStringCDClassical + myDataReader["fldArtists"].ToString() + Environment.NewLine;
+
                 dbStringCDChamber = dbStringCDChamber + myDataReader["fldInstrumentList"].ToString() + Environment.NewLine;
             }
             catch (OleDbException ex)
@@ -531,9 +560,9 @@ dbStringProduct = dbStringProduct + myDataReader["fldPrice"].ToString() + Enviro
                 dbStringProduct = dbStringProduct + myDataReader["fldTitle"].ToString() + Environment.NewLine;
                 dbStringProduct = dbStringProduct + myDataReader["fldQuantity"].ToString() + Environment.NewLine;
                 dbStringProduct = dbStringProduct + myDataReader["fldProductType"].ToString() + Environment.NewLine;
-
                 dbStringCDClassical = dbStringCDClassical + myDataReader["fldLabel"].ToString() + Environment.NewLine;
                 dbStringCDClassical = dbStringCDClassical + myDataReader["fldArtists"].ToString() + Environment.NewLine;
+
                 dbStringCDOrchestra = dbStringCDOrchestra + myDataReader["fldConductor"].ToString() + Environment.NewLine;
             }
             catch (OleDbException ex)
@@ -572,6 +601,7 @@ dbStringProduct = dbStringProduct + myDataReader["fldPrice"].ToString() + Enviro
             try
             {
                 myConnection.Open(); //Open database connection
+
                 myDataReader = myCommand.ExecuteReader();
                 if (myDataReader.HasRows == false) OKFlag = false;
                 else OKFlag = true; // returns true if Select was successful
@@ -622,23 +652,23 @@ dbStringProduct = dbStringProduct + myDataReader["fldPrice"].ToString() + Enviro
             string dbStringBookCIS = "";
             string dbStringBook = "";
 
+
             try
             {
                 myConnection.Open();
                 myDataReader = myCommand.ExecuteReader();
                 if (myDataReader.HasRows == false) OKFlag = false;
                 else OKFlag = true; // returns true if Select was successful
-
                 myDataReader.Read();
                 dbStringProduct = myDataReader["fldUPC"].ToString() + Environment.NewLine;
                 dbStringProduct = dbStringProduct + myDataReader["fldPrice"].ToString() + Environment.NewLine;
                 dbStringProduct = dbStringProduct + myDataReader["fldTitle"].ToString() + Environment.NewLine;
                 dbStringProduct = dbStringProduct + myDataReader["fldQuantity"].ToString() + Environment.NewLine;
                 dbStringProduct = dbStringProduct + myDataReader["fldProductType"].ToString() + Environment.NewLine;
-
                 dbStringBook = dbStringBook + myDataReader["fldISBN"].ToString() + Environment.NewLine;
                 dbStringBook = dbStringBook + myDataReader["fldAuthor"].ToString() + Environment.NewLine;
                 dbStringBook = dbStringBook + myDataReader["fldPages"].ToString() + Environment.NewLine;
+
                 dbStringBookCIS = dbStringBookCIS + myDataReader["fldCISArea"].ToString() + Environment.NewLine;
             }
             catch (OleDbException ex)
@@ -649,23 +679,14 @@ dbStringProduct = dbStringProduct + myDataReader["fldPrice"].ToString() + Enviro
                 OKFlag = false; // returns false if Select was unsuccessful
                 myDataReader = null;
             }
-
             fieldsFound = dbStringProduct + dbStringBook + dbStringBookCIS;
+
             MessageBox.Show("BookCIS Found ..." + Environment.NewLine
                 + dbStringProduct, "Show Found BookCIS", MessageBoxButtons.OK);
             return myDataReader;
         } // end SelectProductFromCBookCIS
 
         // ********** End of SELECT methods **********
-
-
-
-
-
-
-
-
-
         // ********** UPDATE Methods ********** 
 
         // Updates records from Product, Book, CDClassical, UndergraduateCDClassical and GraduateCDClassical tables that match integer parameter ProductUPC
@@ -702,7 +723,7 @@ dbStringProduct = dbStringProduct + myDataReader["fldPrice"].ToString() + Enviro
         {
             string strUpdateBook = "UPDATE Book SET " +
                                     " fldISBN = " + ISBN + ", fldAuthor = '" + author + "', fldPages = " + pages +
-                                    " WHERE fldId = " + UPC;
+                                    " WHERE fldUPC = " + UPC;
 
             OleDbConnection myConnection = new OleDbConnection(strConnection); //Create a connection instance
             OleDbCommand myCommand = new OleDbCommand(strUpdateBook, myConnection);
@@ -731,6 +752,7 @@ dbStringProduct = dbStringProduct + myDataReader["fldPrice"].ToString() + Enviro
                                     "WHERE fldUPC = " + UPC;
 
             OleDbConnection myConnection = new OleDbConnection(strConnection); //Create a connection instance
+
             OleDbCommand myCommand = new OleDbCommand(strUpdateBookCIS, myConnection);
 
             try
@@ -783,7 +805,7 @@ dbStringProduct = dbStringProduct + myDataReader["fldPrice"].ToString() + Enviro
         public bool UpdateCDClassical(int UPC, string label, string artist)
         {
             string strUpdateCDClassical = "UPDATE CDClassical SET fldLabel = '" + label + "', fldArtist = '" + artist + "'" +
-                                       " WHERE fldId = " + UPC;
+                                       " WHERE fldUPC = " + UPC;
 
             OleDbConnection myConnection = new OleDbConnection(strConnection); //Create a connection instance
             OleDbCommand myCommand = new OleDbCommand(strUpdateCDClassical, myConnection);
@@ -810,7 +832,7 @@ dbStringProduct = dbStringProduct + myDataReader["fldPrice"].ToString() + Enviro
         {
             string strUpdateCDChamber =
                 "UPDATE CDChamber SET fldInstrumentList = '" + instrumentList + "' " +
-                " WHERE fldId = " + UPC;
+                " WHERE fldUPC = " + UPC;
 
             OleDbConnection myConnection = new OleDbConnection(strConnection); //Create a connection instance
             OleDbCommand myCommand = new OleDbCommand(strUpdateCDChamber, myConnection);
@@ -837,7 +859,7 @@ dbStringProduct = dbStringProduct + myDataReader["fldPrice"].ToString() + Enviro
         {
             string strUpdateCDOrchestra =
                 "UPDATE CDOrchestra SET fldConductor = '" + conductor + "' " +
-                " WHERE fldId = " + UPC;
+                " WHERE fldUPC = " + UPC;
 
             OleDbConnection myConnection = new OleDbConnection(strConnection); //Create a connection instance
             OleDbCommand myCommand = new OleDbCommand(strUpdateCDOrchestra, myConnection);
@@ -906,6 +928,10 @@ dbStringProduct = dbStringProduct + myDataReader["fldPrice"].ToString() + Enviro
                     using (OleDbCommand command6 = new OleDbCommand("DELETE FROM CDChamber WHERE fldUPC = " + UPC, connection))
                     {
                         OleDbDataReader reader = command6.ExecuteReader();
+                    }
+                    using (OleDbCommand command7 = new OleDbCommand("DELETE FROM CDOrchestra WHERE fldUPC = " + UPC, connection))
+                    {
+                        OleDbDataReader reader = command7.ExecuteReader();
                     }
                     connection.Close();
                 }

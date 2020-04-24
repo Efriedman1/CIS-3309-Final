@@ -1,4 +1,11 @@
-﻿using System;
+﻿/* 
+ * Eric Friedman
+ * Andrew Larkins
+ * CIS-3309
+ * Final Project
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
