@@ -289,7 +289,7 @@ namespace BookCDDVDShop
             gbCDOrchestral.BackColor = Color.Salmon;
             gbBookCIS.BackColor = Color.Salmon;
             gbCDChamber.BackColor = Color.LightGreen;
-            gbCDClassical.BackColor = Color.Salmon;
+            gbCDClassical.BackColor = Color.LightGreen;
             gbDVD.BackColor = Color.Salmon;
 
             //Enable Add Button
