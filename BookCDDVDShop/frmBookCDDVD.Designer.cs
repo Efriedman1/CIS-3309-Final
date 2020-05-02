@@ -419,13 +419,13 @@
             this.txtLeadActor.Location = new System.Drawing.Point(87, 34);
             this.txtLeadActor.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtLeadActor.Name = "txtLeadActor";
-            this.txtLeadActor.Size = new System.Drawing.Size(76, 23);
+            this.txtLeadActor.Size = new System.Drawing.Size(141, 23);
             this.txtLeadActor.TabIndex = 119;
             // 
             // lblReleaseDate
             // 
             this.lblReleaseDate.AutoSize = true;
-            this.lblReleaseDate.Location = new System.Drawing.Point(169, 35);
+            this.lblReleaseDate.Location = new System.Drawing.Point(232, 37);
             this.lblReleaseDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblReleaseDate.Name = "lblReleaseDate";
             this.lblReleaseDate.Size = new System.Drawing.Size(94, 16);
@@ -435,7 +435,7 @@
             // txtReleaseDate
             // 
             this.txtReleaseDate.Enabled = false;
-            this.txtReleaseDate.Location = new System.Drawing.Point(264, 34);
+            this.txtReleaseDate.Location = new System.Drawing.Point(330, 34);
             this.txtReleaseDate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtReleaseDate.Name = "txtReleaseDate";
             this.txtReleaseDate.Size = new System.Drawing.Size(76, 23);
@@ -444,7 +444,7 @@
             // txtRunTime
             // 
             this.txtRunTime.Enabled = false;
-            this.txtRunTime.Location = new System.Drawing.Point(424, 34);
+            this.txtRunTime.Location = new System.Drawing.Point(484, 32);
             this.txtRunTime.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtRunTime.Name = "txtRunTime";
             this.txtRunTime.Size = new System.Drawing.Size(76, 23);
@@ -453,7 +453,7 @@
             // lblRunTime
             // 
             this.lblRunTime.AutoSize = true;
-            this.lblRunTime.Location = new System.Drawing.Point(354, 35);
+            this.lblRunTime.Location = new System.Drawing.Point(410, 37);
             this.lblRunTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRunTime.Name = "lblRunTime";
             this.lblRunTime.Size = new System.Drawing.Size(68, 16);
