@@ -533,6 +533,11 @@ namespace BookCDDVDShop
                         btnDelete.Visible = true; //Show button
                     }
                 }
+                else //  no UPC
+                {
+                    MessageBox.Show("Enter a UPC.");
+                    txtUPC.Focus();
+                }
             }
         }
 
