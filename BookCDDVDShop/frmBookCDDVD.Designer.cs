@@ -603,6 +603,7 @@
             this.txtUPC.Enabled = false;
             this.txtUPC.Location = new System.Drawing.Point(78, 20);
             this.txtUPC.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtUPC.MaxLength = 5;
             this.txtUPC.Name = "txtUPC";
             this.txtUPC.Size = new System.Drawing.Size(76, 23);
             this.txtUPC.TabIndex = 99;
