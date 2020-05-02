@@ -31,5 +31,12 @@ namespace BookCDDVDShop.Classes
         {
             productList.Remove(p); //Remove p from the porductlist
         }
+
+        //get size of array
+        public int size()
+        {
+            return this.productList.Count;
+        }
+
     }
 }

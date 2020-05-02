@@ -456,8 +456,8 @@ namespace BookCDDVDShop
                 string[] lines = s1.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
                 for (int i = 0; i < lines.Length - 1; i++)
                     //MessageBox.Show(i + ") " + lines[i]);
-                if (found)
-                {
+                    if (found)
+                    {
                         btnEdit.Enabled = true;
                         btnDelete.Enabled = true;
                         btnEdit.BackColor = Color.LightGreen;
@@ -465,79 +465,79 @@ namespace BookCDDVDShop
                         btnFindDisplay.BackColor = Color.LightGray;
 
                         if (lines[4] == "Book") //Checks Product type
-                    {
-                        edit = "Book";
-                        txtPrice.Text = lines[1]; //Store value in textbox
-                        txtTitle.Text = lines[2]; //Store value in textbox
-                        txtQuanity.Text = lines[3]; //Store value in textbox
-                        txtISBN1.Text = lines[5].Substring(0, 3); //Store value in textbox
-                        txtISBN2.Text = lines[5].Substring(3, 3); //Store value in textbox
-                        txtAuthor.Text = lines[6]; //Store value in textbox
-                        txtPages.Text = lines[7]; //Store value in textbox
-                        btnEdit.Visible = true;
-                        btnUpdate.Visible = true;
-                        btnDelete.Visible = true;
+                        {
+                            edit = "Book";
+                            txtPrice.Text = lines[1]; //Store value in textbox
+                            txtTitle.Text = lines[2]; //Store value in textbox
+                            txtQuanity.Text = lines[3]; //Store value in textbox
+                            txtISBN1.Text = lines[5].Substring(0, 3); //Store value in textbox
+                            txtISBN2.Text = lines[5].Substring(3, 3); //Store value in textbox
+                            txtAuthor.Text = lines[6]; //Store value in textbox
+                            txtPages.Text = lines[7]; //Store value in textbox
+                            btnEdit.Visible = true;
+                            btnUpdate.Visible = true;
+                            btnDelete.Visible = true;
+                        }
+                        if (lines[4] == "BookCIS") //Checks Product type
+                        {
+                            edit = "BookCIS";
+                            txtPrice.Text = lines[1]; //Store value in textbox
+                            txtTitle.Text = lines[2]; //Store value in textbox
+                            txtQuanity.Text = lines[3]; //Store value in textbox
+                            txtISBN1.Text = lines[5].Substring(0, 3); //Store value in textbox
+                            txtISBN2.Text = lines[5].Substring(3, 3); //Store value in textbox
+                            txtAuthor.Text = lines[6]; //Store value in textbox
+                            txtPages.Text = lines[7]; //Store value in textbox
+                            txtCISArea.Text = lines[8]; //Store value in textbox
+                            btnEdit.Visible = true; //Show button
+                            btnUpdate.Visible = true; //Show button
+                            btnDelete.Visible = true; //Show button
+                        }
+                        if (lines[4] == "DVD") //Checks Product type
+                        {
+                            edit = "DVD";
+                            txtPrice.Text = lines[1]; //Store value in textbox
+                            txtTitle.Text = lines[2]; //Store value in textbox
+                            txtQuanity.Text = lines[3]; //Store value in textbox
+                            txtLeadActor.Text = lines[5]; //Store value in textbox
+                            txtReleaseDate.Text = lines[6]; //Store value in textbox
+                            txtRunTime.Text = lines[7]; //Store value in textbox
+                            btnEdit.Visible = true; //Show button
+                            btnUpdate.Visible = true; //Show button
+                            btnDelete.Visible = true; //Show button
+                        }
+                        if (lines[4] == "CDOrchestra")  //Checks Product type
+                        {
+                            edit = "CDOrchestra";
+                            txtPrice.Text = lines[1]; //Store value in textbox
+                            txtTitle.Text = lines[2]; //Store value in textbox
+                            txtQuanity.Text = lines[3]; //Store value in textbox
+                            txtCDLabel.Text = lines[5]; //Store value in textbox
+                            txtCDArtists.Text = lines[6]; //Store value in textbox
+                            txtConductor.Text = lines[7]; //Store value in textbox
+                            btnEdit.Visible = true; //Show button
+                            btnUpdate.Visible = true; //Show button
+                            btnDelete.Visible = true; //Show button
+                        }
+                        if (lines[4] == "CDChamber") //Checks Product type
+                        {
+                            edit = "CDChamber";
+                            txtPrice.Text = lines[1]; //Store value in textbox
+                            txtTitle.Text = lines[2]; //Store value in textbox
+                            txtQuanity.Text = lines[3]; //Store value in textbox
+                            txtCDLabel.Text = lines[5]; //Store value in textbox
+                            txtCDArtists.Text = lines[6]; //Store value in textbox
+                            txtInstruments.Text = lines[7]; //Store value in textbox
+                            btnEdit.Visible = true; //Show button
+                            btnUpdate.Visible = true; //Show button
+                            btnDelete.Visible = true; //Show button
+                        }
                     }
-                    if (lines[4] == "BookCIS") //Checks Product type
-                    {
-                        edit = "BookCIS";
-                        txtPrice.Text = lines[1]; //Store value in textbox
-                        txtTitle.Text = lines[2]; //Store value in textbox
-                        txtQuanity.Text = lines[3]; //Store value in textbox
-                        txtISBN1.Text = lines[5].Substring(0, 3); //Store value in textbox
-                        txtISBN2.Text = lines[5].Substring(3, 3); //Store value in textbox
-                        txtAuthor.Text = lines[6]; //Store value in textbox
-                        txtPages.Text = lines[7]; //Store value in textbox
-                        txtCISArea.Text = lines[8]; //Store value in textbox
-                        btnEdit.Visible = true; //Show button
-                        btnUpdate.Visible = true; //Show button
-                        btnDelete.Visible = true; //Show button
-                    }
-                    if (lines[4] == "DVD") //Checks Product type
-                    {
-                        edit = "DVD";
-                        txtPrice.Text = lines[1]; //Store value in textbox
-                        txtTitle.Text = lines[2]; //Store value in textbox
-                        txtQuanity.Text = lines[3]; //Store value in textbox
-                        txtLeadActor.Text = lines[5]; //Store value in textbox
-                        txtReleaseDate.Text = lines[6]; //Store value in textbox
-                        txtRunTime.Text = lines[7]; //Store value in textbox
-                        btnEdit.Visible = true; //Show button
-                        btnUpdate.Visible = true; //Show button
-                        btnDelete.Visible = true; //Show button
-                    }
-                    if (lines[4] == "CDOrchestra")  //Checks Product type
-                    {
-                        edit = "CDOrchestra";
-                        txtPrice.Text = lines[1]; //Store value in textbox
-                        txtTitle.Text = lines[2]; //Store value in textbox
-                        txtQuanity.Text = lines[3]; //Store value in textbox
-                        txtCDLabel.Text = lines[5]; //Store value in textbox
-                        txtCDArtists.Text = lines[6]; //Store value in textbox
-                        txtConductor.Text = lines[7]; //Store value in textbox
-                        btnEdit.Visible = true; //Show button
-                        btnUpdate.Visible = true; //Show button
-                        btnDelete.Visible = true; //Show button
-                    }
-                    if (lines[4] == "CDChamber") //Checks Product type
-                    {
-                        edit = "CDChamber";
-                        txtPrice.Text = lines[1]; //Store value in textbox
-                        txtTitle.Text = lines[2]; //Store value in textbox
-                        txtQuanity.Text = lines[3]; //Store value in textbox
-                        txtCDLabel.Text = lines[5]; //Store value in textbox
-                        txtCDArtists.Text = lines[6]; //Store value in textbox
-                        txtInstruments.Text = lines[7]; //Store value in textbox
-                        btnEdit.Visible = true; //Show button
-                        btnUpdate.Visible = true; //Show button
-                        btnDelete.Visible = true; //Show button
-                    }
-                }
-                else //  no UPC
-                {
-                    MessageBox.Show("Enter a UPC.");
-                    txtUPC.Focus();
-                }
+            }
+            else //  no UPC
+            {
+                MessageBox.Show("Enter a UPC.");
+                txtUPC.Focus();
             }
         }
 
@@ -708,7 +708,7 @@ namespace BookCDDVDShop
         {
             productDB.Delete(Convert.ToInt32(txtUPC.Text)); //Delete from database
             MessageBox.Show("Product has been deleted from the database");
-            
+
             //clear the form
             clearAll();
             //Set Focus to Search UPC Button

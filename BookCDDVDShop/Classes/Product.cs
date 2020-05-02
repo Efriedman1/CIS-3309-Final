@@ -15,6 +15,9 @@ using System.Windows.Forms;
 
 namespace BookCDDVDShop.Classes
 {
+
+    [Serializable()]
+
     class Product
     {
         private int hiddenUPC; //Product UPC
@@ -56,13 +59,16 @@ namespace BookCDDVDShop.Classes
         {
             return hiddenQuantity; //Return Quantity
         }
+
+
+
         //Create a string with product values
         public override string ToString()
         {
             string s = "Object Type      : " + base.ToString() + "\n"; //Object Type
             s += "Product UPC      : " + hiddenUPC + "\n"; // UPC
-            s += "Product Title    : " + Convert.ToDecimal(hiddenPrice) + "\n"; //Title
-            s += "Product Price    : " + hiddenTitle + "\n"; //Price
+            s += "Product Title    : " + hiddenTitle + "\n"; //Title
+            s += "Product Price    : " + Convert.ToDecimal(hiddenPrice) + "\n"; //Price
             s += "Product Quantity : " + Convert.ToInt32(hiddenQuantity); //Quantity
             return s;
         }
@@ -71,8 +77,8 @@ namespace BookCDDVDShop.Classes
         {
             string s = " ";
             s += "Product UPC       : " + p.hiddenUPC + "\n";
-            s += "Product Title       : " + Convert.ToDecimal(p.hiddenPrice) + "\n";
-            s += "Product Price      : " + p.hiddenTitle + "\n";
+            s += "Product Title       : " + p.hiddenTitle + "\n";
+            s += "Product Price      : " + Convert.ToDecimal(p.hiddenPrice) + "\n";
             s += "Product Quantity : " + Convert.ToInt32(p.hiddenQuantity);
             MessageBox.Show(s, "Display a Single Product in Product List"); //Message box
         }
